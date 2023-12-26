@@ -1,6 +1,7 @@
 import React from 'react'
 import Blob1 from "../elements/Blob1";
 import TextImage1 from "../elements/TextImage1";
+import TextImage2 from "../elements/TextImage2";
 
 const Home = () => {
   return (
