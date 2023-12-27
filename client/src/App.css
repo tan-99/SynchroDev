@@ -13,17 +13,24 @@
 
 
 body{
-    background-image: linear-gradient(rgba(225, 209, 119, 0.63), rgba(95, 45, 182, 0.82));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.63), rgba(100, 63, 157, 0.81), rgba(95, 45, 182, 0.82));
 
 }
 
 body{
-    background-image: linear-gradient(rgb(8, 4, 19), rgb(4, 14, 24));
-    color: white;
+    /*background-image: linear-gradient(rgb(8, 4, 19), rgb(4, 14, 24));*/
+    /*color: white;*/
     /*display: flex;*/
     overflow-x: hidden;
     font-family: 'Helvetica Neue','Montserrat', sans-serif;
 
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: linear-gradient(rgb(8, 4, 19), rgb(4, 14, 24));
+        color: rgba(218, 200, 173, 0.92);
+    }
 }
 
 .blob{
