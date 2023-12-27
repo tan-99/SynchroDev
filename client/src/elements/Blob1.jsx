@@ -2,7 +2,7 @@ import React from "react";
 
 const Blob1 = () => {
     return(
-        <div className="blob1">
+        <div className="blob" id="blob1">
         </div>
     )
 }
