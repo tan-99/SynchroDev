@@ -37,16 +37,32 @@ function TextImage2() {
         }
         typeEffect()
     }, []);
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }else{
+                    entry.target.classList.remove('show');
+                }
+            })
+        })
 
+        const domain = document.querySelectorAll('.inner');
+        domain.forEach((element)=> observer.observe(element))
+
+
+    }, []);
 
     return (
-        <div className="outer outer-2" >
+        <div className="outer outer-2 " >
 
             <img src="https://www.spec-india.com/wp-content/uploads/2022/10/Hire-Dedicated-Developer-Banner.png"/>
             <div className="inner inner-2">
                 <h2>Programming is for Everyone. SynchroDev is for Everyone.</h2>
                 <h3>Made for <span></span> Devs</h3>
-                <button className="button-29">Login with GitHub</button>
+                <button className="button-29">Our Mission</button>
 
             </div>
 

@@ -6,7 +6,7 @@ import TextImage2 from "../elements/TextImage2";
 import $ from 'jquery';
 import Spacer from "./Spacer";
 import Domains from "../elements/Domains";
-
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -24,6 +24,8 @@ const Home = () => {
           </div>
           <Spacer/>
           <Domains/>
+          {/*<Spacer/>*/}
+          <Footer/>
       </>
   )
 }
