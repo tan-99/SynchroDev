@@ -12,12 +12,11 @@ import Domains from "../elements/Domains";
 const Home = () => {
   return (
       <>
-          <div>
-              {/*<h1>This is HOME</h1>*/}
 
+          <div style={{overflow:'hidden'}}>
+              <TextImage1/>
+              <Blob1/>
           </div>
-          <div><TextImage1/>
-              <Blob1/></div>
           <Spacer/>
           <div style={{position: 'relative'}}>
               <TextImage2/>

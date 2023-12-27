@@ -26,17 +26,19 @@ function TextImage2() {
 
             }else if(isDeleting && charIndex>0){
                 charIndex--
-                setTimeout(typeEffect, 50)
+                setTimeout(typeEffect, 100)
             }else{
                 isDeleting = !isDeleting
                 dynamicText.classList.remove('stop-blinking')
                 wordIndex = !isDeleting ? (wordIndex +1) % words.length : wordIndex
-                setTimeout(typeEffect, 300)
+                setTimeout(typeEffect, 500)
             }
 
         }
         typeEffect()
     }, []);
+
+
     return (
         <div className="outer outer-2" >
 
