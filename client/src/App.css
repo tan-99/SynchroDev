@@ -23,8 +23,8 @@ body{
 }
 
 body{
-    /*background-image: linear-gradient(rgb(8, 4, 19), rgb(4, 14, 24));*/
-    /*color: white;*/
+    background-image: linear-gradient(rgb(8, 4, 19), rgb(4, 14, 24));
+    color: white;
     /*display: flex;*/
     overflow-x: hidden;
     font-family: 'Helvetica Neue','Montserrat', sans-serif;
