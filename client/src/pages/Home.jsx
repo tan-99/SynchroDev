@@ -15,7 +15,7 @@ const Home = () => {
   return (
       <>
           <Navbar />
-          <FeatureCards />
+
           <div style={{overflow:'hidden'}}>
               <TextImage1/>
               <Blob1/>
@@ -27,6 +27,7 @@ const Home = () => {
           </div>
           <Spacer/>
           <Domains/>
+          <FeatureCards />
           {/*<Spacer/>*/}
           <Footer/>
       </>
