@@ -7,12 +7,15 @@ import TextImage2 from "../components/TextImage2";
 import Spacer from "./Spacer";
 import Domains from "../components/Domains";
 import Footer from "./Footer";
+import Navbar from '../components/Navbar'
+import FeatureCards from '../components/FeatureCards'
 
 
 const Home = () => {
   return (
       <>
-
+          <Navbar />
+          <FeatureCards />
           <div style={{overflow:'hidden'}}>
               <TextImage1/>
               <Blob1/>
@@ -27,6 +30,9 @@ const Home = () => {
           {/*<Spacer/>*/}
           <Footer/>
       </>
+=======
+
+
   )
 }
 
