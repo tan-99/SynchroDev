@@ -1,11 +1,11 @@
 import React from 'react'
-import Blob1 from "../elements/Blob1";
-import Blob2 from "../elements/Blob2";
-import TextImage1 from "../elements/TextImage1";
-import TextImage2 from "../elements/TextImage2";
-import $ from 'jquery';
+import Blob1 from "../components/Blob1";
+import Blob2 from "../components/Blob2";
+import TextImage1 from "../components/TextImage1";
+import TextImage2 from "../components/TextImage2";
+// import $ from 'jquery';
 import Spacer from "./Spacer";
-import Domains from "../elements/Domains";
+import Domains from "../components/Domains";
 import Footer from "./Footer";
 
 
