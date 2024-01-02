@@ -59,26 +59,33 @@ const Onboarding = () => {
         } 
         
         else {
-
-          setFormData((prevState) => {
-            let name_attr = e.target.name
-
-            const updatedState = {
-              ...prevState,
-              skill_in_domains: {
-                ...prevState.skill_in_domains,
-                [name_attr]: {
-                  interested: e.target.checked,
-                  skills: []
-                }
-              }
-            }
-            return updatedState;
-          })
+          let name_attr = e.target.name
+          handleCheckboxChange(name_attr)
+          
           console.log(formData)
         }
 
       }
+
+      const handleCheckboxChange = (domain) => {
+        console.log("im in handleCheckboxChange")
+        console.log(domain)
+        setFormData((prevFormData) => {
+          const updatedState = {
+            ...prevFormData,
+            skill_in_domains: {
+              ...prevFormData.skill_in_domains,
+              [domain]: {
+                ...prevFormData.skill_in_domains[domain],
+                interested: !prevFormData.skill_in_domains[domain].interested,
+              },
+            },
+          }
+          return updatedState;
+        }
+        );
+        console.log(formData)
+      };
 
       const handleSubmit = async (e) => {
         e.preventDefault()
@@ -90,11 +97,11 @@ const Onboarding = () => {
       }
     
       return (
-        <div className="App">
-          <h1>User Information Form: </h1>
-            <form>
+        <div>
+          <h1 className='text-4xl font-bold text-center mt-8 mb-4'>Registration Form: </h1>
+            <form class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <section>
-                <label htmlFor="first_name">First Name</label>
+                <label htmlFor="first_name" className="block text-gray-700 text-xl font-bold mb-2">First Name</label>
     
                 <input
                   id="first_name"
@@ -104,58 +111,77 @@ const Onboarding = () => {
                   required={true}
                   value={formData.first_name}
                   onChange={handleChanges}
+                  className="w-full border rounded py-2 px-3"
                 />
             
-                <h2>domain</h2>
-                <div className="multiple-input-container">
-                  <input
-                    id="webDevelopmentIdentity"
-                    type="checkbox"
-                    name="domain_identity"
-                    value="webDevelopment"
-                    onChange={handleChanges}
-                  />
-                  <label htmlFor="webDevelopmentIdentity">webDevelopment</label>
-                  <input
-                    id="appDevelopmentIdentity"
-                    type="checkbox"
-                    name="domain_identity"
-                    value="appDevelopment"
-                    onChange={handleChanges}
-                  />
-                  <label htmlFor="appDevelopmentIdentity">appDevelopment</label>
-                  <input
-                    id="aimlIdentity"
-                    type="checkbox"
-                    name="domain_identity"
-                    value="aiml"
-                    onChange={handleChanges}
-                  />
-                  <label htmlFor="aimlIdentity">AI/ML</label>
-                  <input
-                    id="blockIdentity"
-                    type="checkbox"
-                    name="domain_identity"
-                    value="block"
-                    onChange={handleChanges}
-                  />
-                  <label htmlFor="blockIdentity">blockchain</label>
+                <h2 className="block text-gray-700 text-xl font-bold mb-2 mt-4">Domain</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-2">
+                  <div className='flex items-center'>
+                    <input
+                      id="webDevelopmentIdentity"
+                      type="checkbox"
+                      name="webDevelopment"
+                      value="webDevelopment"
+                      onChange={handleChanges}
+                      className="mr-2 h-6 w-6"
+                    />
+                    <label htmlFor="webDevelopmentIdentity">Web Development</label>
+                  </div>
 
-                  <h2>location</h2>
+                  <div className='flex items-center'>
+                    <input
+                      id="appDevelopmentIdentity"
+                      type="checkbox"
+                      name="appDevelopment"
+                      value="appDevelopment"
+                      onChange={handleChanges}
+                      className="mr-2 h-6 w-6"
+                    />
+                    <label htmlFor="appDevelopmentIdentity">App Development</label>
+                  </div>
+                  
+                  <div className='flex items-center'>
+                    <input
+                      id="aimlIdentity"
+                      type="checkbox"
+                      name="aiml"
+                      value="aiml"
+                      onChange={handleChanges}
+                      className="mr-2 h-6 w-6"
+                    />
+                    <label htmlFor="aimlIdentity">AI/ML</label>
+                  </div>
+
+                  <div className='flex items-center'>
+                    <input
+                      id="blockIdentity"
+                      type="checkbox"
+                      name="block"
+                      value="block"
+                      onChange={handleChanges}
+                      className="mr-2 h-6 w-6"
+                    />
+                    <label htmlFor="blockIdentity">Blockchain</label>
+                  </div>
+                
+                </div>
+
+                  <h2 className='block text-gray-700 text-xl font-bold mb-2 mt-4'>Location</h2>
                   
     
-                  <h2>email</h2>
+                  <h2 className='block text-gray-700 text-xl font-bold mb-2 mt-4'>Email</h2>
                   <input
                     id="emailid"
                     type="text"
                     name="email"
-                    placeholder="email-id"
+                    placeholder="Email-id"
                     required={true}
                     value={formData.email}
                     onChange={handleChanges}
+                    className="w-full border rounded py-2 px-3"
                   />
     
-                <h2>About Me</h2>
+                <h2 className='block text-gray-700 text-xl font-bold mb-2 mt-4'>About Me</h2>
                 <input
                   type="text"
                   id="about"
@@ -164,9 +190,10 @@ const Onboarding = () => {
                   placeholder="A bit about yourself and your coding skills"
                   value={formData.about}
                   onChange={handleChanges}
+                  className="w-full border rounded py-2 px-3"
                 />
 
-                <h2>Year</h2>
+                <h2 className='block text-gray-700 text-xl font-bold mb-2 mt-4'>Year <span className='text-gray-700 text-sm font-bold mb-2 mt-4'>(in college)</span></h2>
                 <input
                   type="text"
                   id="year"
@@ -176,13 +203,13 @@ const Onboarding = () => {
                   value={formData.year}
                   onChange={handleChanges}
                   pattern="/^[1-4]$/"
+                  className="w-full border rounded py-2 px-3"
                 />
 
-    
-                </div>            
+               
                 </section>
 
-                <input type="submit" onClick={handleSubmit}/>
+                <input type="submit" onClick={handleSubmit} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"/>
             </form>
         </div>
     )
