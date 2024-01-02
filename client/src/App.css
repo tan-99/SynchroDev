@@ -11,9 +11,9 @@
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
-* {
-    outline: solid 1px red;
-}
+/** {*/
+/*    outline: solid 1px red;*/
+/*}*/
 
 body {
     background-image: linear-gradient(
@@ -64,14 +64,14 @@ body {
             rgba(158, 31, 222, 0.63),
             rgba(0, 243, 255, 0.64)
     );
-    margin-top: 0px;
+    margin-top: 0;
     top: -100px;
     left: -200px;
     text-align: center;
 }
 
 .outer {
-    padding: 0px;
+    padding: 0;
     margin-top: 150px;
     text-align: center;
     font-family: "Helvetica Neue", "Montserrat", sans-serif;
@@ -85,7 +85,7 @@ body {
 }
 
 .inner {
-    padding-left: 0px;
+    padding-left: 0;
     display: inline-block;
     width: 450px;
     margin-right: 300px;
@@ -114,7 +114,7 @@ body {
 }
 
 .inner-2 {
-    padding-left: 0px;
+    padding-left: 0;
     margin-left: 200px;
 }
 
