@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@200;300;400;600&display=swap");
+
+
+.auth-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+* {
+    font-family: "Helvetica Neue";
+}
+
+.blob {
+    z-index: 0;
+    /*margin-right: -300px;*/
+}
